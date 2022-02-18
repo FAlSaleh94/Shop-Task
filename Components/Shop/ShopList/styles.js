@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
   },
 
   text: {
-    fontFamily: "Papyrus",
+    fontFamily: "Palatino",
     textAlign: "center",
     fontSize: 50,
     color: "#ffe4b5",

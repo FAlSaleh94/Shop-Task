@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   text: {
-    fontFamily: "TrebuchetMS-Italic",
+    fontFamily: "Palatino",
     alignItems: "center",
     fontSize: 50,
     color: "chocolate",

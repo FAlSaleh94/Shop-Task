@@ -1,6 +1,7 @@
 import Home from "../Home";
 import React from "react";
-import CartIcon from "../Cart/CartIcon";
+import CartList from "../Cart/CartList";
+import CartButton from "../Buttons/CartButton";
 import ShopList from "../Shop/ShopList";
 import ShopDetail from "../Shop/ShopList/ShopDetail";
 import { createStackNavigator } from "@react-navigation/stack";
@@ -12,10 +13,11 @@ const StackNavigator = () => {
       initialRouteName="Home"
       screenOptions={{
         headerStyle: {
-          backgroundColor: "#A9B6BC",
+          backgroundColor: "#000000",
         },
         headerTitleStyle: {
-          fontFamily: "Marker Felt",
+          fontFamily: "Palatino",
+          color: "#e9967a",
         },
       }}
     >
@@ -26,12 +28,17 @@ const StackNavigator = () => {
           headerShown: false,
         }}
       />
-      <Screen name="Shops" component={ShopList} />
+      <Screen
+        name="Shops"
+        component={ShopList}
+        options={{ headerRight: () => <CartButton /> }}
+      />
       <Screen
         name="Detail"
         component={ShopDetail}
-        options={{ headerRight: () => <CartIcon /> }}
+        options={{ headerRight: () => <CartButton /> }}
       />
+      <Screen name="Cart" component={CartList} />
     </Navigator>
   );
 };

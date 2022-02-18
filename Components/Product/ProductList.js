@@ -8,7 +8,7 @@ const ProductList = ({ products }) => {
     <ProductItem key={product._id} product={product} />
   ));
   return (
-    <View style={styles.ProductText}>
+    <View style={styles.productText}>
       <Text style={styles.detailtext}>Product Detail</Text>
       {productList}
     </View>
